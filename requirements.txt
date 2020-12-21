@@ -4,5 +4,9 @@
 #
 #    pip-compile
 #
-numpy==1.19.4             # via -r requirements.in, scipy
-scipy==1.5.4              # via -r requirements.in
+joblib==1.0.0             # via scikit-learn
+numpy==1.19.4             # via -r requirements.in, scikit-learn, scipy
+scikit-learn==0.23.2      # via sklearn
+scipy==1.5.4              # via -r requirements.in, scikit-learn
+sklearn==0.0              # via -r requirements.in
+threadpoolctl==2.1.0      # via scikit-learn
