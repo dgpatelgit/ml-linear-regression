@@ -1,0 +1,38 @@
+Matrix factorization
+Dividing complex matrices into parts to better handle and computation ease. Three ways of performing matrix decomposition (or factorization.
+
+LU Matrix Decomposition
+
+The LU decomposition is for square matrices and decomposes a matrix into L and U components.
+
+A = L . U
+
+The LU decomposition is often used to simplify the solving of systems of linear equations, such as finding the coefficients in a linear regression, as well as in calculating the determinant and inverse of a matrix.
+A variation of this decomposition that is numerically more stable to solve in practice is called the LUP decomposition, or the LU decomposition with partial pivoting.
+
+A = P . L . U
+
+The LU decomposition can be implemented in Python with the lu() function. More specifically, this function calculates an LPU decomposition.
+
+
+
+QR Matrix Decomposition
+
+The QR decomposition is for m x n matrices (not limited to square matrices) and decomposes a matrix into Q and R components.
+
+A = Q . R
+
+Where A is the matrix that we wish to decompose, Q a matrix with the size m x m, and R is an upper triangle matrix with the size m x n.
+
+The QR decomposition is found using an iterative numerical method that can fail for those matrices that cannot be decomposed, or decomposed easily.
+
+Like the LU decomposition, the QR decomposition is often used to solve systems of linear equations, although is not limited to square matrices.
+
+The QR decomposition can be implemented in NumPy using the qr() function. By default, the function returns the Q and R matrices with smaller or ‘reduced’ dimensions that is more economical. We can change this to return the expected sizes of m x m for Q and m x n for R by specifying the mode argument as ‘complete’, although this is not required for most applications.
+
+
+
+Reference :: 
+https://machinelearningmastery.com/introduction-to-matrix-decompositions-for-machine-learning/
+https://towardsdatascience.com/understanding-linear-regression-using-the-singular-value-decomposition-1f37fb10dd33
+
